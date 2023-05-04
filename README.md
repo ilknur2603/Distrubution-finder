@@ -12,6 +12,7 @@
 - #6. [Testing Instructions](#testing-instructions)
 - #7. [User Story](#User-Story)
 - #8. [Questions](#questions)
+- #9. [Collaborators](#collaborators github account)
 - <br>
 
 ---
