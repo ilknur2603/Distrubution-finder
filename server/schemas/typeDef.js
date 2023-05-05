@@ -22,7 +22,7 @@ type Auth {
 type Charity {
     _id :ID
     name : String
-    location : String 
+    location : String Donation
     mission : String
     ein : String 
     categories : [Category]
@@ -57,6 +57,6 @@ type Mutation {
         unsaveCharity(charityId: ID!): User
     )
 
-
 }
 `
+module.exports = typeDefs;
