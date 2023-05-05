@@ -1,5 +1,7 @@
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import NavBar from "./components/NavBar";
+import SignUp from "./components/SignUp";
 
 
 function App() {
@@ -7,6 +9,8 @@ function App() {
     <div>
     <NavBar />
     <Hero />
+    <SignUp />
+    <Footer />
     </div>
   );
 }
