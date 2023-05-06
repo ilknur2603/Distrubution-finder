@@ -24,7 +24,8 @@ type Charity {
     name : String
     location : String Donation
     mission : String
-    ein : String 
+    img : String 
+    ein  : String 
     categories : [Category]
 }
 type  Donation {
