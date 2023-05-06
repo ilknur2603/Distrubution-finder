@@ -11,8 +11,8 @@ const db = require('./config/connection');
 
 
 require('dotenv').config({ path: './config/.env' });
-// not needed for GraphQL API
-// const routes = require('./routes');  
+
+
 
 const PORT = process.env.PORT || 3001;
 const app = express();

@@ -1,5 +1,5 @@
 const { Schema, model } = require ("mongoose");
-
+const Charity = model("Charity", charitySchema);
 
 const charitySchema = new Schema ({
     name :{
@@ -15,8 +15,12 @@ const charitySchema = new Schema ({
         type: String, 
       },
     
-    //img :{
-        //},
+    img :{
+        type: String,
+        },
+    ein :{
+            type: String,
+            },
     categories: [
          {
       type: Schema.Types.ObjectId,
@@ -25,3 +29,4 @@ const charitySchema = new Schema ({
         ],
     }
 )
+module.exports =Charity;
