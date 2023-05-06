@@ -23,7 +23,7 @@ import SignUp from "./components/SignUp";
 
 
 
-function NavBar() {
+function App() {
   return (
     <Router>
       <div>
@@ -76,5 +76,5 @@ function NavBar() {
   );
 }
 
-export default NavBar;
+export default App;
 
