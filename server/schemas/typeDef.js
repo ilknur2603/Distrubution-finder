@@ -54,10 +54,8 @@ type Mutation {
         donationAmount : Float!
         donationDate : String!
         charity : ID! Donation
-        saveCharity(charityId: ID!): User
-        unsaveCharity(charityId: ID!): User
     )
-
+    addCharity(charityName: String!): User
 }
-`
+`;
 module.exports = typeDefs;
