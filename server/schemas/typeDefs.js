@@ -59,13 +59,18 @@ type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email:String!, password: String!): Auth
     addDonation(
+
         donationAmount: Float!
         donationDate: String!
         charity: ID!
         ): Donation
         saveCharity(charityId: ID!): User
         unsaveCharity(charityId: ID!): User
-    
+        donationAmount : Float!
+        donationDate : String!
+        charity : ID! Donation
+    )
+    addCharity(charityName: String!): User
 
 }
 `;

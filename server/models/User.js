@@ -8,6 +8,11 @@ const userSchema = new Schema ({
         unique:true,
         match:[/.+@.+\..+/, "Must use a valid email address"],
     },
+    email: {
+      type: String, 
+      required: true,
+      trim: true
+    },
     password:{
         type: String,
         required:true,

@@ -28,6 +28,7 @@
         "mongoose": "^7.1.0",
         "mutation": "^0.0.1",
         "nodemon": "^2.0.22",
-        "react-router-dom": "^5.2.0"
+        "react-router-dom": "^5.2.0",
+        "react-stripe-checkout": "^2.6.3"
     }
 }
