@@ -1,20 +1,20 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import logodark from '../assets/logodark.png';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import logodark from '../src/assets/logodark.png';
+
+
 
 
 // Import your components for each page
-import OurPeople from './OurPeople';
-import WhyGiv2 from './WhyGiv2';
-import Resources from './Resources';
-import Donate from './Donate';
-
+import OurPeople from '../src/pages/Our people';
+import WhyGiv2 from '../src/pages/Why giv2';
+import Resources from '../src/pages/Resources';
+import Donate from '../src/pages/Donate';
 /*
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import NavBar from "./components/NavBar";
 import SignUp from "./components/SignUp";
-
 */
 
 
@@ -25,6 +25,8 @@ import SignUp from "./components/SignUp";
 
 function App() {
   return (
+    
+
     <Router>
       <div>
         <header className="pb-6 bg-white lg:pb-0">
@@ -64,15 +66,19 @@ function App() {
           </div>
         </header>
 
-        <Switch>
+        <Route>
           <Route exact path="/" />
           <Route path="/our-people" component={OurPeople} />
           <Route path="/why-giv2" component={WhyGiv2} />
           <Route path="/resources" component={Resources} />
           <Route path="/donate" component={Donate} />
-        </Switch>
-      </div>
-    </Router>
+        </Route>
+        </div>
+     </Router>
+     
+     
+   
+   
   );
 }
 

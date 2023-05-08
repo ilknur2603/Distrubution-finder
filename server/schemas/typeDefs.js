@@ -4,7 +4,7 @@ const {gql} = require("apollo-server-express");
 //This schema defines 4 main types: User, Auth, Charity, and Donation
 
 const typeDefs = gql`
-type User{
+type User {
     _id :ID!
     username : String!
     email : String!
@@ -15,24 +15,32 @@ type User{
 
 # declaring type Auth with it values
 type Auth {
-    token : ID!
-    user : User
+    token: ID!
+    user: User
 }
+type Category {
+    _id: ID
+    name: String
+    charities: [Charity]!
+  }
+
+
 
 type Charity {
     _id :ID
     name : String
-    location : String Donation
-    mission : String
-    img : String 
-    ein  : String 
-    categories : [Category]
+    location: String
+    mission: String
+    link: String
+    img: String 
+    ein : String 
+    categories: [Category]
 }
 type  Donation {
-    _id : ID
-    donationAmount : Float!
+    _id: ID
+    donationAmount: Float!
     donationDate: String!
-    user : User!
+    user: User!
     charity : Charity!
 }
 
@@ -40,24 +48,25 @@ type  Donation {
 
 type Query {
     users : [User]!
-    user(userId : ID!) User
-    me : User
-    charity(charityId:ID!) : Charity
+    user(userId : ID!): User
+    me: User
+    charity(charityId:ID!): Charity
     charities : [Charity]
     donations : [Donation]
 }
 #We will do update, delete and add with using Mutation
 type Mutation {
-    addUser(username : String!, email : String!, password : String!) : Auth
-    login(email:String!, password : String!) Auth
+    addUser(username: String!, email: String!, password: String!): Auth
+    login(email:String!, password: String!): Auth
     addDonation(
-        donationAmount : Float!
-        donationDate : String!
-        charity : ID! Donation
+        donationAmount: Float!
+        donationDate: String!
+        charity: ID!
+        ): Donation
         saveCharity(charityId: ID!): User
         unsaveCharity(charityId: ID!): User
-    )
+    
 
 }
-`
+`;
 module.exports = typeDefs;

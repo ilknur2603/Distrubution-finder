@@ -1,5 +1,5 @@
 const { Schema, model } = require ("mongoose");
-const Charity = model("Charity", charitySchema);
+
 
 const charitySchema = new Schema ({
     name :{
@@ -11,7 +11,11 @@ const charitySchema = new Schema ({
     },
     mission: {
         type: String,
-      }, ein: {
+      }, 
+      link: {
+        type: String, 
+      },
+      ein: {
         type: String, 
       },
     
@@ -27,6 +31,8 @@ const charitySchema = new Schema ({
               ref: "Category",
             },
         ],
-    }
-)
+    });
+
+    const Charity = model("Charity", charitySchema);
+    
 module.exports =Charity;
