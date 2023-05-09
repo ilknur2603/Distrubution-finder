@@ -6,8 +6,8 @@ import {ToastContainer} from "react-toastify"
 
 
 // Import your components for each page
-import OurPeople from '../src/pages/Our people';
-import WhyGiv2 from '../src/pages/Why giv2';
+import OurPeople from './pages/OurPeople';
+import WhyGiv2 from './pages/WhyGiv2';
 import Resources from '../src/pages/Resources';
 import Donate from '../src/pages/Donate';
 /*

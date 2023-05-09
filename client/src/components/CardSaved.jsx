@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useQuery } from "@apollo/client";
 import { QUERY_ME } from "../utils/queries";
-import Modal from "./Modal";
+// import Modal from "./Modal";
 import { UNSAVE_CHARITY } from "../utils/mutations";
 import { useMutation } from "@apollo/client";
 import { Link } from "react-router-dom";
@@ -97,8 +97,8 @@ const Card = () => {
                   </button>
                 </Link>
 
-                {/* Modal Button */}
-                <Modal charityId={charity._id} />
+                {/* Modal Button
+                <Modal charityId={charity._id} /> */}
               </div>
             </div>
           </div>

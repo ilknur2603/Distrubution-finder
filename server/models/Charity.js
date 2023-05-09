@@ -6,25 +6,25 @@ const charitySchema = new Schema ({
         type : String,
         required: true,
     },
-    location: {
+    city: {
         type : String,
+    },
+    state: {
+      type: String,
     },
     mission: {
         type: String,
       }, 
-      link: {
+    link: {
         type: String, 
       },
-      ein: {
+    ein: {
         type: String, 
       },
     
     img :{
         type: String,
         },
-    ein :{
-            type: String,
-            },
     categories: [
          {
       type: Schema.Types.ObjectId,
