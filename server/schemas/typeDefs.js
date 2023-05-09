@@ -29,7 +29,8 @@ type Category {
 type Charity {
     _id :ID
     name : String
-    location: String
+    city: String
+    state: String
     mission: String
     link: String
     img: String 
