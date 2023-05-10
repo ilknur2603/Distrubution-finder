@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-
+import Toastify from "./toastify"
 // set token secret and expiration date
 const secret = 'mysecretsshhhhh';
 const expiration = '2h';
@@ -24,7 +24,8 @@ module.exports = {
         const { data } = jwt.verify(token, secret, { maxAge: expiration });
         req.user = data;
       } catch {
-      console.log("err")
+        //Toastify is showing alert to user
+      Toastify("Authorization error")
         
       }
   
@@ -34,10 +35,7 @@ module.exports = {
     },
     signToken: function ({ username, email, _id }) {
         const payload = { username, email, _id };
-const jwt = require('jsonwebtoken');
 
-const secret = 'supersecretshhhhh';
-const expiration = '2h';
 
 module.exports = {
     authMiddleware: function ({ req }) {
@@ -55,7 +53,8 @@ module.exports = {
         const { data } = jwt.verify(token, secret, { maxAge: expiration });
         req.user = data;
       } catch {
-        console.log('Invalid token');
+         //Toastify is showing alert to user
+        Toastify('Invalid token');
       }
   
       return req;

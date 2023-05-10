@@ -1,6 +1,6 @@
 import React from 'react'
 import logodark from '../assets/logodark.png' 
-
+import { Link } from 'react-router-dom'
 function NavBar() {
   return (
     <div>
@@ -9,9 +9,9 @@ function NavBar() {
         {/* <!-- lg+ --> */}
         <nav class="flex items-center justify-between h-16 lg:h-20">
             <div class="flex-shrink-0">
-                <a href="#" title="" class="flex">
+            <Link to="/" className='navbar-brand'>
                     <img class="w-auto h-8 lg:h-10" src={logodark} alt="" />
-                </a>
+            </Link>
             </div>
 
             <button type="button" class="inline-flex p-2 text-black transition-all duration-200 rounded-md lg:hidden focus:bg-gray-100 hover:bg-gray-100">

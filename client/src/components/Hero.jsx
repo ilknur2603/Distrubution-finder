@@ -1,6 +1,6 @@
 import React from 'react' 
 import HeroImage from '../assets/hero.png'  
-
+import {NavLink} from 'react-router-dom'
 function Hero() {
   return (
     <div>
@@ -21,7 +21,7 @@ function Hero() {
                         </svg>
                     </a>
 
-                    <p class="mt-5 text-gray-600">Already joined us? <a href="#" title="" class="text-black transition-all duration-200 hover:underline">Log in</a></p>
+                    <p class="mt-5 text-gray-600">Already joined us? <NavLink to="/LoginSignup" className='login'>Log in</NavLink></p>
                 </div>
 
                 <div>

@@ -1,11 +1,14 @@
 import React from 'react'
 
-const Our= () => {
+import Swiper from '../components/Swiper';
+
+function OurPeople() {
   return (
     <div>
-      ouu
+      <Swiper />
+      {/* OurPeople sayfasının diğer içeriği */}
     </div>
-  )
+  );
 }
 
-export default Our;
+export default OurPeople;
