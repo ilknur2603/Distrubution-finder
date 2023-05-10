@@ -9,7 +9,7 @@ query Query{
 }
 `;
 export const SINGLE_USER = gql `
-query Query{$user:ID!){
+query Query{$userId:ID!){
     user(userId: $userId){
         _id
         username
@@ -31,7 +31,8 @@ query Query{
 }
 `;
 export const SINGLE_CHARITY= gql`
-query Query($charityId:$charityId){
+query Query($charityId:ID!){
+  charity(charityId:$charityId)
     _id
     name
     link

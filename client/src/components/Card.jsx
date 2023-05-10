@@ -16,7 +16,7 @@ const titleCard = props => {
         <titleCard.Title className="display-6">{title}</titleCard.Title>
         
     </titleCard.body>
-    <Button className="w-100 rounded-0" variant="success">Add To Cart</Button>
+  
    </titleCard>
   );
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Switch, Link } from 'react-router-dom';
 import logodark from '../src/assets/logodark.png';
 import NavBar from "./components/NavBar";
 import {setContext} from "@apollo/client/link/context"
@@ -12,8 +12,11 @@ import WhyGiv2 from './pages/WhyGiv2';
 import Resources from '../src/pages/Resources';
 import Donate from '../src/pages/Donate';
 import Footer from "./components/Footer";
+import {ToastContainer, toast} from "react-toastify"
+import "react-toastify/dist/ReactToastify.css";
+
 // import Hero from "./components/Hero";
-// import NavBar from "./components/NavBar";
+
 // import SignUp from "./components/SignUp";
 
 
@@ -94,6 +97,7 @@ function App() {
         <Footer />
         </div>
         </Router>
+        <ToastContainer/>
     </ApolloProvider>
      
    

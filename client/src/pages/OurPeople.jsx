@@ -6,7 +6,7 @@ function OurPeople() {
   return (
     <div>
       <Swiper />
-      {/* OurPeople sayfasının diğer içeriği */}
+     
     </div>
   );
 }
