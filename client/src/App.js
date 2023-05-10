@@ -2,9 +2,13 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import logodark from '../src/assets/logodark.png';
 import {ToastContainer} from "react-toastify"
-
-
-
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  createHttpLink,
+} from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
 // Import your components for each page
 import OurPeople from './pages/OurPeople';
 import WhyGiv2 from './pages/WhyGiv2';
@@ -17,15 +21,29 @@ import NavBar from "./components/NavBar";
 import SignUp from "./components/SignUp";
 */
 
+const httpLink = createHttpLink({
+  uri: '/graphql',
+});
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem('id_token');
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
+});
 
 
 
-
-
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
 
 function App() {
   return (
-    
+    <ApolloProvider client={client}>
 
     <Router>
       <div>
@@ -78,7 +96,7 @@ function App() {
      
      
    
-   
+   </ApolloProvider>
   );
 }
 
