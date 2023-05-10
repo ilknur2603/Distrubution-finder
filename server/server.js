@@ -39,6 +39,8 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html')); 
 });
 
+// Serve up static assets
+app.use('/img', express.static(path.join(__dirname, '../client/src/img')));
 
 // Create a new instance of an Apollo server with the GraphQL schema 
 

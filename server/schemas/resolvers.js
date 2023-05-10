@@ -41,7 +41,7 @@ const resolvers = {
 // POST new Donation to User
         addDonation: async (parent, { donationAmount, donationDate, charity }, context) => {
             if(context.user) {
-                const addingDonations = await Donation.findOneAndUpdate(
+                const addingDonations = await User.findOneAndUpdate(
                     {_id: context.user._id},
                     {$addToSet: {donations: {donationAmount, donationDate}, charity: charity}},
                     {new: true}
@@ -51,11 +51,11 @@ const resolvers = {
             throw new AuthenticationError("You must have an account to add a donation!");
         },
 
-        addCharity: async (parent, { charityName }, context) => {
+        addCharity: async (parent, {  charityId  }, context) => {
             if(context.user) {
                 const addingCharity = await User.findOneAndUpdate(
                     {_id: context.user._id},
-                    {$addToSet: {charities: charityName}},
+                    {$addToSet: {charities:  charityId }},
                     {new: true}
                 ).populate("charities")
                 return addingCharity;
