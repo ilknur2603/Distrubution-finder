@@ -9,12 +9,12 @@ query Query{
 }
 `;
 export const SINGLE_USER = gql `
-query Query{$userId:ID!){
+query Query($userId:ID!){
     user(userId: $userId){
         _id
         username
     }
-}}
+}
 `;
 // Added query to fetch all charities of user
 export const QUERY_ME= gql`
