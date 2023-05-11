@@ -6,7 +6,7 @@ const expiration = '2h';
 
 module.exports = {
     // function for our authenticated routes
-    authMiddleware: function ({ req }) { 
+    authMiddleware: function ({ req, res, next  }) { 
       // allows token to be sent via  req.query or headers
       let token = req.body.token || req.query.token || req.headers.authorization;  
   
@@ -16,7 +16,7 @@ module.exports = {
       }
       // if no token passed, return the req
       if (!token) {
-        return req; 
+        return res.status(400).json({ message: 'You have no token!' });
       }
   
       // verify token and get user data out of it
@@ -24,17 +24,20 @@ module.exports = {
         const { data } = jwt.verify(token, secret, { maxAge: expiration });
         req.user = data;
       } catch {
-        //Toastify is showing alert to user
-      console.log("Authorization error")
-        
+
+
+        console.log('Invalid token');
+        return res.status(400).json({ message: 'invalid token!' });
+
       }
   
       // return the request object,
       // which is then passed to the resolver as `context`
-      return req; 
+      next(); 
     },
     signToken: function ({ username, email, _id }) {
         const payload = { username, email, _id };
+
 
 
 module.exports = {
@@ -53,7 +56,6 @@ module.exports = {
         const { data } = jwt.verify(token, secret, { maxAge: expiration });
         req.user = data;
       } catch {
-         //Toastify is showing alert to user
         console.log('Invalid token');
       }
   
@@ -67,8 +69,4 @@ module.exports = {
   };
           
 
-        return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
-      },
-    };
 
- 

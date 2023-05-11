@@ -1,10 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Switch, Link } from 'react-router-dom';
 import logodark from '../src/assets/logodark.png';
+
 import NavBar from "./components/NavBar";
 import {setContext} from "@apollo/client/link/context"
 import { ApolloClient, ApolloProvider,createHttpLink,InMemoryCache } from '@apollo/client';
 
+
+
+import {ToastContainer} from "react-toastify"
 
 // Import your components for each page
 import OurPeople from './pages/OurPeople';
@@ -21,8 +25,19 @@ import "react-toastify/dist/ReactToastify.css";
 
 
 const httpLink = createHttpLink({
-  uri: "/graphql"
-})
+
+  uri: '/graphql',
+});
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem('id_token');
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
+});
+
 
 const authLink = setContext((_,{headers})=>{
   const token = localStorage.getItem("id_token");
@@ -34,18 +49,18 @@ const authLink = setContext((_,{headers})=>{
   }
 })
 
+
 const client = new ApolloClient({
   link: authLink.concat(httpLink),
-  cache: new InMemoryCache()
-})
-
-
-
+  cache: new InMemoryCache(),
+});
 
 function App() {
   return (
+
     
     <ApolloProvider client={client}>
+
     <Router>
       
       <NavBar />
@@ -101,7 +116,7 @@ function App() {
     </ApolloProvider>
      
    
-   
+   </ApolloProvider>
   );
 }
 
