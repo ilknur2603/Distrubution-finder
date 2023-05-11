@@ -1,6 +1,6 @@
 import React from 'react'
 import logodark from '../assets/logodark.png' 
-
+import { Link, NavLink } from 'react-router-dom'
 function NavBar() {
   return (
     <div>
@@ -9,9 +9,9 @@ function NavBar() {
         {/* <!-- lg+ --> */}
         <nav class="flex items-center justify-between h-16 lg:h-20">
             <div class="flex-shrink-0">
-                <a href="#" title="" class="flex">
+            <Link to="/" className='navbar-brand'>
                     <img class="w-auto h-8 lg:h-10" src={logodark} alt="" />
-                </a>
+            </Link>
             </div>
 
             <button type="button" class="inline-flex p-2 text-black transition-all duration-200 rounded-md lg:hidden focus:bg-gray-100 hover:bg-gray-100">
@@ -26,17 +26,18 @@ function NavBar() {
                 </svg>
             </button>
 
-            <div class="hidden lg:flex lg:items-center lg:ml-auto lg:space-x-10">
-                <a href="#" title="" class="text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Our people </a>
+            <div className="hidden lg:flex lg:items-center lg:ml-auto lg:space-x-10">
+                
+                <NavLink style= {({isActive}) =>({color: isActive && "red"})} to="/ourpeople" className="text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Our people </NavLink>
 
-                <a href="#" title="" class="text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Why giv2? </a>
+                <NavLink style= {({isActive}) =>({color: isActive && "red"})} to="/whygiv2" className="text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Why giv2? </NavLink>
 
-                <a href="#" title="" class="text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Resources </a>
+                <NavLink style= {({isActive}) =>({color: isActive && "red"})}  to="/resources" className="text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Resources </NavLink>
 
-                <a href="#" title="" class="text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Donate </a>
+                <NavLink style= {({isActive}) =>({color: isActive && "red"})}  to="/donate" className="text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Donate </NavLink>
             </div>
 
-            <a href="#" title="" class="items-center justify-center hidden px-4 py-3 ml-10 text-base font-semibold text-white transition-all duration-200 bg-cyan-600 border border-transparent rounded-md lg:inline-flex hover:bg-cyan-500 focus:bg-cyan-500" role="button">Search for charity</a>
+            <a href="#" title="" className="items-center justify-center hidden px-4 py-3 ml-10 text-base font-semibold text-white transition-all duration-200 bg-cyan-600 border border-transparent rounded-md lg:inline-flex hover:bg-cyan-500 focus:bg-cyan-500" role="button">Search for charity</a>
         </nav>
 
         {/* <!-- xs to lg --> */}
