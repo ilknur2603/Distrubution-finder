@@ -1,24 +1,24 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Card, Button} from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 
 
-const titleCard = props => {
+const TitleCard = props => {
     let {imgSrc, title, text}= props.data;
   return (
     
-   <titleCard className="p-0 overflow-hidden h-100 shadow">
+   <Card className="p-0 overflow-hidden h-100 shadow">
     <div className="overflow-hidden rounded p-0 bg-light">
-       <titleCard.img variant="top" src={imgSrc} /> 
+       <Card.img variant="top" src={imgSrc} /> 
     </div>
-    <titleCard.body className= "text-center">
-        <titleCard.Title className="display-6">{text}</titleCard.Title>
-        <titleCard.Title className="display-6">{title}</titleCard.Title>
+    <Card.Body className= "text-center">
+        <Card.Title className="display-6">{text}</Card.Title>
+        <Card.Title className="display-6">{title}</Card.Title>
         
-    </titleCard.body>
+    </Card.Body>
   
-   </titleCard>
+   </Card>
   );
 };
 
-export default titleCard
+export default TitleCard;

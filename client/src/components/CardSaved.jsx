@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const Card = () => {
   // usequery for get all chairities for login in user
   const { data } = useQuery(QUERY_ME);
-  const charities = data.me?.charities || [];
+  const charities = data?.charities || [];
   const [unSaveCharity] = useMutation(UNSAVE_CHARITY);
   const [formState, setFormState] = useState({ charityId: "" });
 
