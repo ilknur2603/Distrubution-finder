@@ -1,5 +1,5 @@
 //import Graphql
-const {gql} = require("apollo-server-express");
+const { gql } = require("apollo-server-express");
 //User, username and email necessary
 //This schema defines 4 main types: User, Auth, Charity, and Donation
 
@@ -65,13 +65,9 @@ type Mutation {
         donationDate: String!
         charity: ID!
         ): Donation
-        saveCharity(charityId: ID!): User
+        addCharity(charityId: ID!): User
         unsaveCharity(charityId: ID!): User
-        donationAmount : Float!
-        donationDate : String!
-        charity : ID! Donation
-    )
-    addCharity(charityName: String!): User
+        
 
 }
 `;

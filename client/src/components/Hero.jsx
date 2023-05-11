@@ -1,7 +1,17 @@
-import React from 'react' 
+
 import HeroImage from '../assets/hero.png'  
+import {Link} from 'react-router-dom'
+
+import React, { useState } from 'react' 
+
+import LoginForm from './LoginForm';
+import SignupForm from './SignUpForm'; 
+
 
 function Hero() {
+
+    const [showModal, setShowModal] = useState(false);
+
   return (
     <div>
         <div class="bg-white">
@@ -21,7 +31,10 @@ function Hero() {
                         </svg>
                     </a>
 
-                    <p class="mt-5 text-gray-600">Already joined us? <a href="#" title="" class="text-black transition-all duration-200 hover:underline">Log in</a></p>
+
+                    <p class="mt-5 text-gray-600">Already joined us? <Link to="/LoginSignup" className='login'>Log in</Link></p>
+
+
                 </div>
 
                 <div>

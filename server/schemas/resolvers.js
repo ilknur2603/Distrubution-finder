@@ -32,18 +32,18 @@ const resolvers = {
       
             return { token, user };
         },
-
+ //POST: Adding a new use
         addUser: async( parent, {username, email, password}) => {
             const user = await User.create({ username, email, password});
             const token = signToken(user);
             return { token, user };
         },
-
+// POST new Donation to User
         addDonation: async (parent, { donationAmount, donationDate, charity }, context) => {
             if(context.user) {
                 const addingDonations = await User.findOneAndUpdate(
                     {_id: context.user._id},
-                    {$addToSet: {donations: {donationAmount, donationDate}, charities: charity}},
+                    {$addToSet: {donations: {donationAmount, donationDate}, charity: charity}},
                     {new: true}
                 ).populate("donations").populate("charities")
                 return addingDonations;
@@ -51,18 +51,30 @@ const resolvers = {
             throw new AuthenticationError("You must have an account to add a donation!");
         },
 
-        addCharity: async (parent, { charityName }, context) => {
+        addCharity: async (parent, {  charityId  }, context) => {
             if(context.user) {
                 const addingCharity = await User.findOneAndUpdate(
                     {_id: context.user._id},
-                    {$addToSet: {charities: charityName}},
+                    {$addToSet: {charities:  charityId }},
                     {new: true}
                 ).populate("charities")
                 return addingCharity;
             };
             throw new AuthenticationError("You must have an account to add a donation!");
-        }
+        },
+         
+  
+      // DELETE Charity from User Portfolio (unsaving)
+      unsaveCharity: async (parent, { charityId }, context) => {
+        const charity = await Charity.findOne({ _id: charityId });
+        const updateUserCharity = await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $pull: { charities: charityId } },
+          { new: true }
+        );
+        return updateUserCharity;
     },
+  },
 };
 
 module.exports = resolvers;
