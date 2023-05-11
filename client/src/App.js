@@ -7,7 +7,6 @@ import {setContext} from "@apollo/client/link/context"
 import { ApolloClient, ApolloProvider,createHttpLink,InMemoryCache } from '@apollo/client';
 
 
-
 //import {ToastContainer} from "react-toastify"
 
 // Import your components for each page
@@ -17,6 +16,8 @@ import Resources from '../src/pages/Resources';
 import Donate from '../src/pages/Donate';
 import Footer from "./components/Footer";
 import "react-toastify/dist/ReactToastify.css";
+import CharitySearch from "../src/pages/CharitySearch.jsx";
+
 
 // import Hero from "./components/Hero";
 
@@ -38,8 +39,6 @@ const authLink = setContext((_, { headers }) => {
 });
 
 
-
-
 const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
@@ -56,15 +55,10 @@ function App() {
       <NavBar />
       <div>
         <header className="pb-6 bg-white lg:pb-0">
-          <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-            {/* <!-- lg+ --> */}
-            
-              
 
-              
+          <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
 
           
-          </div>
         </header>
         
        
@@ -74,6 +68,7 @@ function App() {
           <Route path="/whygiv2" component={WhyGiv2} />
           <Route path="/resources" component={Resources} />
           <Route path="/donate" component={Donate} />
+          <Route path="/CharitySearch" component={CharitySearch} />
           <Route  path='*'  element={<h1 className='display-2'>Wrong page!</h1>} />
         </Switch>
        
@@ -83,8 +78,6 @@ function App() {
       {/*<ToastContainer/>*/}
     </ApolloProvider>
      
-   
-  
   );
 }
 
