@@ -12,34 +12,34 @@ import './Swiper.css'
 
 const slider = [
   {
-      title: "Orchid",
+      title: "Environment & Climate Change",
       description: "Orchids are plants that belong to the family Orchidaceae, a diverse and widespread group of flowering plants with blooms that are often colourful and fragrant. Orchidaceae is one of the two largest families of flowering plants, along with the Asteraceae.",
-      url: "https://t1.gstatic.com/licensed-image?q=tbn:ANd9GcSbywUFuXvFMZ1dqCi--Qc4bjlee40_0qvyaggtR1fWqbMQtsT7GfjWZj4oeOf5lRNq",
+      url: "https://github.com/NgandalaLopes/imagery/blob/main/climate.jpg?raw=true",
       explore: "https://en.wikipedia.org/wiki/Orchid"
     },
     {
-      title: "Hydrangea",
+      title: "Hunger & Food Policy",
       description: "Hydrangea, commonly named the hortensia, is a genus of more than 75 species of flowering plants native to Asia and the Americas. By far the greatest species diversity is in eastern Asia, notably China, Korea, and Japan.",
-      url: "https://www.whiteflowerfarm.com/mas_assets/cache/image/6/3/d/1/25553.Jpg",
+      url: "https://github.com/NgandalaLopes/imagery/blob/main/hunger.jpg?raw=true",
       explore: "https://en.wikipedia.org/wiki/Hydrangea"
     },
     {
-      title: "Lily",
+      title: "Health General",
       description: "Lilium is a genus of herbaceous flowering plants growing from bulbs, all with large prominent flowers. They are the true lilies. Lilies are a group of flowering plants which are important in culture and literature in much of the world.",
-      url: "https://www.atozflowers.com/wp-content/uploads/2017/11/Lilium_Eyeliner_05.jpg",
+      url: "https://github.com/NgandalaLopes/imagery/blob/main/medical.jpg?raw=true",
       explore: "https://en.wikipedia.org/wiki/Lily"
     },
   
     {
-      title: "Tulip",
+      title: "Mental Health",
       description: "Tulips are a genus of spring-blooming perennial herbaceous bulbiferous geophytes. The flowers are usually large, showy and brightly coloured, generally red, pink, yellow, or white. They often have a different coloured blotch at the base of the tepals, internally.",
-      url: "https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcTnuMdz8NbpO5c-FxH1BFE1_Z-RkIzBetqjYH7ySXAZ9S07lIqxN2yiN_9QO2dLn5aG",
+      url: "https://github.com/NgandalaLopes/imagery/blob/main/mental.jpg?raw=true",
       explore: "https://en.wikipedia.org/wiki/Tulip"
     },
     {
-      title: "Chrysanthemum",
+      title: "Veterans & Military",
       description: "Chrysanthemums, sometimes called mums or chrysanths, are flowering plants of the genus Chrysanthemum in the family Asteraceae. They are native to East Asia and northeastern Europe. Most species originate from East Asia and the center of diversity is in China. Countless horticultural varieties and cultivars exist.",
-      url: "https://cdn.britannica.com/09/174809-050-CA9F8F8C/daisy-mums-ray-flowers-disk-centre.jpg",
+      url: "https://github.com/NgandalaLopes/imagery/blob/main/veterans.jpg?raw=true",
       explore: "https://en.wikipedia.org/wiki/Chrysanthemum"
     },
 ]
@@ -49,9 +49,9 @@ const PowerPointSwiper = () => {
     <div>
         <div className='carousel-content'>
             <span>discover</span>
-            <h1>React Image Slider</h1>
+            <h1>Top-Rated Charities</h1>
             <hr />
-            <p>React Image Slider using the Swiper Framework</p>
+            <p>Top-Rated list generally spend 75% or more of their budgets on programs.</p>
         </div>
     </div>
 
