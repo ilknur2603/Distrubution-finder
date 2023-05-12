@@ -1,10 +1,9 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Switch, Link } from 'react-router-dom';
-import logodark from '../src/assets/logodark.png';
+import { BrowserRouter as Router, Route, Routes, Switch, Link } from 'react-router-dom'; 
 
 import NavBar from "./components/NavBar";
 import {setContext} from "@apollo/client/link/context"
-import { ApolloClient, ApolloProvider,createHttpLink,InMemoryCache } from '@apollo/client';
+import { ApolloClient, ApolloProvider, createHttpLink, InMemoryCache } from '@apollo/client';
 
 
 //import {ToastContainer} from "react-toastify"
@@ -52,16 +51,10 @@ function App() {
 
     <Router>
       
-      <NavBar />
+      <NavBar /> 
       <div>
-        <header className="pb-6 bg-white lg:pb-0">
 
-          <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-
-          
-        </header>
         
-       
         <Switch>
           <Route exact path="/" />
           <Route path="/ourpeople" component={OurPeople} />
