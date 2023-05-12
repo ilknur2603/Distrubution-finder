@@ -1,6 +1,6 @@
 import React from 'react'
 
-function SignUpForm() {
+function Page2() {
   return (
     <div>
         <section class="py-10 bg-gray-50 sm:py-16 lg:py-24">
@@ -83,4 +83,4 @@ function SignUpForm() {
   )
 }
 
-export default SignUpForm
+export default Page2

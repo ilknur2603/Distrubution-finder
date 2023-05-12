@@ -1,11 +1,10 @@
-import React from 'react'
- import DonateForm from '../components/DonateForm';
+import React from 'react' 
 const Resources= () => {
  
 
   
     return (
-      <div> 
+      <div>   
       </div>
     );
   }
