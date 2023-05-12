@@ -7,8 +7,8 @@ import { Pagination, EffectCoverflow, Autoplay } from 'swiper'
 import './Swiper.css'
 
 //import images
-import flower1 from '../img/flower-1.png';
-import flower2 from '../img/flower-2.png'
+// import flower1 from '../img/flower-1.png';
+// import flower2 from '../img/flower-2.png'
 
 const slider = [
   {
@@ -104,8 +104,8 @@ const PowerPointSwiper = () => {
         }
     </Swiper>
 
-    <img src={flower1} alt="bg image" className='bgdonut1' />
-    <img src={flower2} alt="bg image" className='bgdonut2' />
+    {/* <img src={flower1} alt="bg image" className='bgdonut1' />
+    <img src={flower2} alt="bg image" className='bgdonut2' /> */}
 </div>
 )
 }
