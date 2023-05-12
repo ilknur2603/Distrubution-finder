@@ -98,7 +98,7 @@ const LoginForm = () => {
           Submit
         </Button>
         <div class="text-center mt-4">
-                <p class="text-base text-gray-600">Don’t have an account? <a href="#" title="" class="font-medium text-cyan-500 transition-all duration-200 hover:text-cyan-600 hover:underline">Sign up</a></p>
+                <p class="text-base text-gray-600">Don’t have an account? <a href="/signup" title="" class="font-medium text-cyan-500 transition-all duration-200 hover:text-cyan-600 hover:underline">Sign up</a></p>
           </div>
 
           </div>
