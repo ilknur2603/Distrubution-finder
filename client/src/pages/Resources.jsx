@@ -1,13 +1,11 @@
 import React from 'react'
-import SwiperResources from '../components/SwiperResources';
+ import DonateForm from '../components/DonateForm';
 const Resources= () => {
  
 
   
     return (
-      <div>
-        <SwiperResources />
-        {/* OurPeople sayfasının diğer içeriği */}
+      <div> 
       </div>
     );
   }
