@@ -7,9 +7,16 @@ export default function Home() {
   return (
     
     <div
-      className="home bg-white">
-         <Main />
-        <Page1 />
+
+      className="home"
+      style={{
+        background:
+          "radial-gradient(circle, rgba(23,174,202,1) 0%, rgba(148,165,233,1) 100%)",
+      }}
+    >
+      <div className="container mx-auto px-1">
+       
+      </div>
     </div>
   );
 }
