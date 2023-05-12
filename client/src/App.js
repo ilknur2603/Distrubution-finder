@@ -13,10 +13,12 @@ import OurPeople from './pages/OurPeople';
 import WhyGiv2 from './pages/WhyGiv2';
 import Resources from '../src/pages/Resources';
 import Donate from '../src/pages/Donate';
+import SignupForm from './components/SignUpForm';
 import Footer from "./components/Footer";
 import "react-toastify/dist/ReactToastify.css";
 import CharitySearch from "../src/pages/CharitySearch.jsx";
 import Hero from "../src/components/Hero"
+import LoginForm from './components/LoginForm';
 
 // import Hero from "./components/Hero";
 
@@ -61,6 +63,8 @@ function App() {
           <Route path="/whygiv2" component={WhyGiv2} />
           <Route path="/resources" component={Resources} />
           <Route path="/donate" component={Donate} />
+          <Route path='/signup' component={SignupForm} />
+          <Route path='/login' component={LoginForm} />
           <Route path="/CharitySearch" component={CharitySearch} />
           <Route  path='*'  element={<h1 className='display-2'>Wrong page!</h1>} />
         </Switch>
