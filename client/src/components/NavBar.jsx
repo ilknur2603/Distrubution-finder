@@ -44,13 +44,13 @@ function NavBar() {
         <nav class="pt-4 pb-6 bg-white border border-gray-200 rounded-md shadow-md lg:hidden">
             <div class="flow-root">
                 <div class="flex flex-col px-6 -my-2 space-y-1">
-                    <a href="#" title="" class="inline-flex py-2 text-base  font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Our people</a>
+                <NavLink style= {({isActive}) =>({color: isActive && "red"})} to="/ourpeople"  className="inline-flex py-2 text-base  font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Our people</NavLink>
 
-                    <a href="#" title="" class="inline-flex py-2 text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Why giv2? </a>
+                <NavLink style= {({isActive}) =>({color: isActive && "red"})} to="/whygiv2" class="inline-flex py-2 text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Why giv2? </NavLink>
 
-                    <a href="#" title="" class="inline-flex py-2 text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Resources </a>
+                <NavLink style= {({isActive}) =>({color: isActive && "red"})} to="/resources" class="inline-flex py-2 text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Resources </NavLink>
 
-                    <a href="#" title="" class="inline-flex py-2 text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Donate </a>
+                <NavLink style= {({isActive}) =>({color: isActive && "red"})} to="/donate" class="inline-flex py-2 text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Donate </NavLink>
                 </div>
             </div>
 

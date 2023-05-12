@@ -5,7 +5,9 @@ import logodark from '../src/assets/logodark.png';
 import NavBar from "./components/NavBar";
 import {setContext} from "@apollo/client/link/context"
 import { ApolloClient, ApolloProvider,createHttpLink,InMemoryCache } from '@apollo/client';
-import {ToastContainer} from "react-toastify"
+
+
+//import {ToastContainer} from "react-toastify"
 
 // Import your components for each page
 import OurPeople from './pages/OurPeople';
@@ -13,6 +15,7 @@ import WhyGiv2 from './pages/WhyGiv2';
 import Resources from '../src/pages/Resources';
 import Donate from '../src/pages/Donate';
 import Footer from "./components/Footer";
+import "react-toastify/dist/ReactToastify.css";
 import CharitySearch from "../src/pages/CharitySearch.jsx";
 
 
@@ -52,14 +55,17 @@ function App() {
       <NavBar />
       <div>
         <header className="pb-6 bg-white lg:pb-0">
+
+          <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+
           
         </header>
         
        
         <Switch>
           <Route exact path="/" />
-          <Route path="/our-people" component={OurPeople} />
-          <Route path="/why-giv2" component={WhyGiv2} />
+          <Route path="/ourpeople" component={OurPeople} />
+          <Route path="/whygiv2" component={WhyGiv2} />
           <Route path="/resources" component={Resources} />
           <Route path="/donate" component={Donate} />
           <Route path="/CharitySearch" component={CharitySearch} />
@@ -69,11 +75,9 @@ function App() {
         <Footer />
         </div>
         </Router>
-        <ToastContainer/>
+      {/*<ToastContainer/>*/}
     </ApolloProvider>
      
-   
-
   );
 }
 
