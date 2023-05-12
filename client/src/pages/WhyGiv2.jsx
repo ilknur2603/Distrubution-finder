@@ -13,7 +13,7 @@ export default function Home() {
       }}
     >
       <div className="container mx-auto px-1">
-        <Hero />
+       
       </div>
     </div>
   );

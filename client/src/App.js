@@ -19,7 +19,7 @@ import Donate from '../src/pages/Donate';
 import Footer from "./components/Footer";
 import "react-toastify/dist/ReactToastify.css";
 import CharitySearch from "../src/pages/CharitySearch.jsx";
-
+import Hero from "../src/components/Hero"
 
 // import Hero from "./components/Hero";
 
@@ -63,7 +63,7 @@ function App() {
         
        
         <Switch>
-          <Route exact path="/" />
+          <Route exact path="/" component={Hero}/>
           <Route path="/ourpeople" component={OurPeople} />
           <Route path="/whygiv2" component={WhyGiv2} />
           <Route path="/resources" component={Resources} />
