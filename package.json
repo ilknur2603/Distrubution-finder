@@ -29,6 +29,7 @@
         "mutation": "^0.0.1",
         "nodemon": "^2.0.22",
         "react-router-dom": "^5.2.0",
-        "react-stripe-checkout": "^2.6.3"
+        "react-stripe-checkout": "^2.6.3",
+        "swiper": "^9.3.1"
     }
 }
