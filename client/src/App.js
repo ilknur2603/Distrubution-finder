@@ -10,6 +10,8 @@ import { ApolloClient, ApolloProvider,createHttpLink,InMemoryCache } from '@apol
 //import {ToastContainer} from "react-toastify"
 
 // Import your components for each page
+import LoginForm from './components/LoginForm';
+import SignupForm from './components/SignUpForm';
 import OurPeople from './pages/OurPeople';
 import WhyGiv2 from './pages/WhyGiv2';
 import Resources from '../src/pages/Resources';
@@ -56,8 +58,6 @@ function App() {
       <div>
         <header className="pb-6 bg-white lg:pb-0">
 
-          <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-
           
         </header>
         
@@ -68,6 +68,8 @@ function App() {
           <Route path="/whygiv2" component={WhyGiv2} />
           <Route path="/resources" component={Resources} />
           <Route path="/donate" component={Donate} />
+          <Route path="/login" component={LoginForm} />
+          <Route path="/signup" component={SignupForm} />
           <Route path="/CharitySearch" component={CharitySearch} />
           <Route  path='*'  element={<h1 className='display-2'>Wrong page!</h1>} />
         </Switch>

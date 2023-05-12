@@ -30,7 +30,7 @@ function NavBar() {
                 
                 <NavLink style= {({isActive}) =>({color: isActive && "red"})} to="/ourpeople" className="text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Our people </NavLink>
 
-                <NavLink style= {({isActive}) =>({color: isActive && "red"})} to="/why-giv2" className="text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Why giv2? </NavLink>
+                <NavLink style= {({isActive}) =>({color: isActive && "red"})} to="/whygiv2" className="text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Why giv2? </NavLink>
 
                 <NavLink style= {({isActive}) =>({color: isActive && "red"})}  to="/resources" className="text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Resources </NavLink>
 
