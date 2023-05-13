@@ -4,24 +4,24 @@ import { Link, NavLink } from 'react-router-dom'
 function NavBar() {
   return (
     <div>
-        <header class="pb-6 bg-white lg:pb-0">
-    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <header className="pb-6 bg-white lg:pb-0">
+    <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         {/* <!-- lg+ --> */}
-        <nav class="flex items-center justify-between h-16 lg:h-20">
-            <div class="flex-shrink-0">
+        <nav className="flex items-center justify-between h-16 lg:h-20">
+            <div className="flex-shrink-0">
             <Link to="/" className='navbar-brand'>
-                    <img class="w-auto h-8 lg:h-10" src={logodark} alt="" />
+                    <img className="w-auto h-8 lg:h-10" src={logodark} alt="" />
             </Link>
             </div>
 
-            <button type="button" class="inline-flex p-2 text-black transition-all duration-200 rounded-md lg:hidden focus:bg-gray-100 hover:bg-gray-100">
+            <button type="button" className="inline-flex p-2 text-black transition-all duration-200 rounded-md lg:hidden focus:bg-gray-100 hover:bg-gray-100">
                 {/* <!-- Menu open: "hidden", Menu closed: "block" --> */}
-                <svg class="block w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="block w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
                 </svg>
 
                 {/* <!-- Menu open: "block", Menu closed: "hidden" --> */}
-                <svg class="hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
@@ -41,21 +41,21 @@ function NavBar() {
         </nav>
 
         {/* <!-- xs to lg --> */}
-        <nav class="pt-4 pb-6 bg-white border border-gray-200 rounded-md shadow-md lg:hidden">
-            <div class="flow-root">
-                <div class="flex flex-col px-6 -my-2 space-y-1">
+        <nav className="pt-4 pb-6 bg-white border border-gray-200 rounded-md shadow-md lg:hidden">
+            <div className="flow-root">
+                <div className="flex flex-col px-6 -my-2 space-y-1">
                 <NavLink style= {({isActive}) =>({color: isActive && "red"})} to="/ourpeople"  className="inline-flex py-2 text-base  font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Our people</NavLink>
 
-                <NavLink style= {({isActive}) =>({color: isActive && "red"})} to="/whygiv2" class="inline-flex py-2 text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Why giv2? </NavLink>
+                <NavLink style= {({isActive}) =>({color: isActive && "red"})} to="/whygiv2" className="inline-flex py-2 text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Why giv2? </NavLink>
 
-                <NavLink style= {({isActive}) =>({color: isActive && "red"})} to="/resources" class="inline-flex py-2 text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Resources </NavLink>
+                <NavLink style= {({isActive}) =>({color: isActive && "red"})} to="/resources" className="inline-flex py-2 text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Resources </NavLink>
 
-                <NavLink style= {({isActive}) =>({color: isActive && "red"})} to="/donate" class="inline-flex py-2 text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Donate </NavLink>
+                <NavLink style= {({isActive}) =>({color: isActive && "red"})} to="/donate" className="inline-flex py-2 text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Donate </NavLink>
                 </div>
             </div>
 
-            <div class="px-6 mt-6">
-                <a href="#" title="" class="inline-flex justify-center px-4 py-3 text-base font-semibold text-white transition-all duration-200  bg-cyan-600 border border-transparent rounded-md lg:inline-flex hover:bg-cyan-500 focus:bg-cyan-500" role="button"> Search for charity </a>
+            <div className="px-6 mt-6">
+                <a href="#" title="" className="inline-flex justify-center px-4 py-3 text-base font-semibold text-white transition-all duration-200  bg-cyan-600 border border-transparent rounded-md lg:inline-flex hover:bg-cyan-500 focus:bg-cyan-500" role="button"> Search for charity </a>
             </div>
         </nav>
     </div>

@@ -23,48 +23,50 @@ export const ADD_USER = gql`
   }
 `;
 export const ADD_DONATION = gql`
-  mutation Mutation(
-    $donationAmount: Float!
-    $donationDate: String!
-    $charity: ID!
-  ) {
-    addDonation(
-      donationAmount: $donationAmount
-      donationDate: $donationDate
-      charity: $charity
-    ) {
-      _id
-      charity {
-        _id
-        name
-        state
-        mission
-        link
-        ein
-        location
-      }
-      donationAmount
-      donationDate
-      user {
-        _id
-        username
-      }
-    }
-  }
-`;
-export const ADD_CHARITY = gql`
-  mutation Mutation($charityId: ID!) {
-    addCharity(charityId: $charityId) {
+mutation Mutation(
+  $donationAmount: Float!
+  $donationDate: String!
+  $charity: ID!
+) {
+  addDonation(
+    donationAmount: $donationAmount
+    donationDate: $donationDate
+    charity: $charity
+  ) 
+    donationAmount
+    donationDate
+    user {
       _id
       username
-      categories {
-        _id
-      }
-      charities {
-        _id
-      }
     }
   }
+
+`;
+export const ADD_CHARITY = gql`
+mutation Mutation($newCharity: InputCharity) {
+  saveCharity(newCharity: $newCharity) {
+    _id
+    username
+    email
+    savedCharitys {
+      charityId
+      name
+      state
+      mission
+      link
+      ein
+      location
+      city
+    }
+    donationAmount
+    donationDate
+    user {
+      _id
+      username
+    }
+  }
+}
+
 `;
 
 // Updated mutation
@@ -73,9 +75,7 @@ export const UNSAVE_CHARITY = gql`
     unsaveCharity(charityId:$charityId) {
       _id
       username
-      categories {
-        _id
-      }
+     
       charities {
         _id
       }
