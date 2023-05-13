@@ -15,32 +15,32 @@ const slider = [
       title: "Environment & Climate Change",
       description: "Orchids are plants that belong to the family Orchidaceae, a diverse and widespread group of flowering plants with blooms that are often colourful and fragrant. Orchidaceae is one of the two largest families of flowering plants, along with the Asteraceae.",
       url: "https://github.com/NgandalaLopes/imagery/blob/main/climate.jpg?raw=true",
-      explore: "https://en.wikipedia.org/wiki/Orchid"
+      explore: "https://donate.stripe.com/14k4j87YU8Xd97q9AA"
     },
     {
       title: "Hunger & Food Policy",
       description: "Hydrangea, commonly named the hortensia, is a genus of more than 75 species of flowering plants native to Asia and the Americas. By far the greatest species diversity is in eastern Asia, notably China, Korea, and Japan.",
       url: "https://github.com/NgandalaLopes/imagery/blob/main/hunger.jpg?raw=true",
-      explore: "https://en.wikipedia.org/wiki/Hydrangea"
+      explore: "https://donate.stripe.com/14k4j83IE7T9cjC289"
     },
     {
       title: "Health General",
       description: "Lilium is a genus of herbaceous flowering plants growing from bulbs, all with large prominent flowers. They are the true lilies. Lilies are a group of flowering plants which are important in culture and literature in much of the world.",
       url: "https://github.com/NgandalaLopes/imagery/blob/main/medical.jpg?raw=true",
-      explore: "https://en.wikipedia.org/wiki/Lily"
+      explore: "https://donate.stripe.com/28o4j81Aw6P5erKfZ0"
     },
   
     {
       title: "Mental Health",
       description: "Tulips are a genus of spring-blooming perennial herbaceous bulbiferous geophytes. The flowers are usually large, showy and brightly coloured, generally red, pink, yellow, or white. They often have a different coloured blotch at the base of the tepals, internally.",
       url: "https://github.com/NgandalaLopes/imagery/blob/main/mental.jpg?raw=true",
-      explore: "https://en.wikipedia.org/wiki/Tulip"
+      explore: "https://donate.stripe.com/fZe16W3IE2yPfvO147"
     },
     {
       title: "Veterans & Military",
       description: "Chrysanthemums, sometimes called mums or chrysanths, are flowering plants of the genus Chrysanthemum in the family Asteraceae. They are native to East Asia and northeastern Europe. Most species originate from East Asia and the center of diversity is in China. Countless horticultural varieties and cultivars exist.",
       url: "https://github.com/NgandalaLopes/imagery/blob/main/veterans.jpg?raw=true",
-      explore: "https://en.wikipedia.org/wiki/Chrysanthemum"
+      explore: "https://donate.stripe.com/5kA8zofrm8Xd5Ve6os"
     },
 ]
 const PowerPointSwiper = () => {
@@ -97,7 +97,7 @@ const PowerPointSwiper = () => {
                     <div>
                         <h2>{data.title}</h2>
                         <p>{data.description}</p>
-                        <a href={`${data.explore}`} target="_blank" className='slider-btn'>explore</a>
+                        <a href={`${data.explore}`} target="_blank" className='slider-btn'>donate</a>
                     </div>
                 </SwiperSlide>
             ))
