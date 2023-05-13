@@ -1,13 +1,10 @@
-import React from 'react'
-import SwiperResources from '../components/SwiperResources';
+import React from 'react' 
 const Resources= () => {
  
 
   
     return (
-      <div>
-        <SwiperResources />
-        {/* OurPeople sayfasının diğer içeriği */}
+      <div>   
       </div>
     );
   }

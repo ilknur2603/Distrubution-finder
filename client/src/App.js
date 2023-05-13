@@ -1,10 +1,9 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Switch, Link } from 'react-router-dom';
-import logodark from '../src/assets/logodark.png';
+import { BrowserRouter as Router, Route, Routes, Switch, Link } from 'react-router-dom'; 
 
 import NavBar from "./components/NavBar";
 import {setContext} from "@apollo/client/link/context"
-import { ApolloClient, ApolloProvider,createHttpLink,InMemoryCache } from '@apollo/client';
+import { ApolloClient, ApolloProvider, createHttpLink, InMemoryCache } from '@apollo/client';
 
 
 //import {ToastContainer} from "react-toastify"
@@ -14,6 +13,7 @@ import OurPeople from './pages/OurPeople';
 import WhyGiv2 from './pages/WhyGiv2';
 import Resources from '../src/pages/Resources';
 import Donate from '../src/pages/Donate';
+import SignupForm from './components/SignUpForm';
 import Footer from "./components/Footer";
 import "react-toastify/dist/ReactToastify.css";
 import CharitySearch from "../src/pages/CharitySearch";
@@ -52,22 +52,22 @@ function App() {
 
     <Router>
       
-      <NavBar />
+      <NavBar /> 
       <div>
-        <header className="pb-6 bg-white lg:pb-0">
-
+<header>
           {/* <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">// */}
 
           
-        </header>
+      </header>
         
-       
         <Switch>
-          <Route exact path="/" />
+          <Route exact path="/" component={Hero}/>
           <Route path="/ourpeople" component={OurPeople} />
           <Route path="/whygiv2" component={WhyGiv2} />
           <Route path="/resources" component={Resources} />
           <Route path="/donate" component={Donate} />
+          <Route path='/signup' component={SignupForm} />
+          <Route path='/login' component={LoginForm} />
           <Route path="/CharitySearch" component={CharitySearch} />
           <Route  path='*'  element={<h1 className='display-2'>Wrong page!</h1>} />
         </Switch>
