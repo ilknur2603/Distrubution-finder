@@ -82,3 +82,33 @@ export const UNSAVE_CHARITY = gql`
     }
   }
 `;
+
+export const addCharityIds = gql`
+  mutation Mutation($charityId: ID!) {
+    addCharity(charityId: $charityId) {
+      _id
+      username
+      categories {
+        _id
+      }
+      charities {
+        _id
+      }
+    }
+  }
+`;
+
+export const getSavedCharityIds = gql`
+mutation Mutation($charityId: ID!) {
+  addCharity(charityId: $charityId) {
+    _id
+    username
+    categories {
+      _id
+    }
+    charities {
+      _id
+    }
+  }
+}
+`;

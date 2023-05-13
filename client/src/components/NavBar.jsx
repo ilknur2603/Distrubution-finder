@@ -1,6 +1,7 @@
 import React from 'react'
 import logodark from '../assets/logodark.png' 
 import { Link, NavLink } from 'react-router-dom'
+
 function NavBar() {
   return (
     <div>
@@ -30,14 +31,14 @@ function NavBar() {
                 
                 <NavLink style= {({isActive}) =>({color: isActive && "red"})} to="/ourpeople" className="text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Our people </NavLink>
 
-                <NavLink style= {({isActive}) =>({color: isActive && "red"})} to="/why-giv2" className="text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Why giv2? </NavLink>
+                <NavLink style= {({isActive}) =>({color: isActive && "red"})} to="/whygiv2" className="text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Why giv2? </NavLink>
 
                 <NavLink style= {({isActive}) =>({color: isActive && "red"})}  to="/resources" className="text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Resources </NavLink>
 
                 <NavLink style= {({isActive}) =>({color: isActive && "red"})}  to="/donate" className="text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Donate </NavLink>
-            </div>
 
-            <a href="CharitySearch" title="CharitySearch" className="items-center justify-center hidden px-4 py-3 ml-10 text-base font-semibold text-white transition-all duration-200 bg-cyan-600 border border-transparent rounded-md lg:inline-flex hover:bg-cyan-500 focus:bg-cyan-500" role="button">Search for charity</a>
+                <NavLink style= {({isActive}) =>({color: isActive && "red"})}  to="/CharitySearch" className="items-center justify-center hidden px-4 py-3 ml-10 text-base font-semibold text-white transition-all duration-200 bg-cyan-600 border border-transparent rounded-md lg:inline-flex hover:bg-cyan-500 focus:bg-cyan-500"> Search for Charity </NavLink>
+            </div>
         </nav>
 
         {/* <!-- xs to lg --> */}
@@ -51,11 +52,10 @@ function NavBar() {
                 <NavLink style= {({isActive}) =>({color: isActive && "red"})} to="/resources" class="inline-flex py-2 text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Resources </NavLink>
 
                 <NavLink style= {({isActive}) =>({color: isActive && "red"})} to="/donate" class="inline-flex py-2 text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Donate </NavLink>
-                </div>
-            </div>
+                
+                <NavLink style= {({isActive}) =>({color: isActive && "red"})}  to="/CharitySearch" className="items-center justify-center hidden px-4 py-3 ml-10 text-base font-semibold text-white transition-all duration-200 bg-cyan-600 border border-transparent rounded-md lg:inline-flex hover:bg-cyan-500 focus:bg-cyan-500"> Search for Charity </NavLink>
 
-            <div class="px-6 mt-6">
-                <a href="#" title="" class="inline-flex justify-center px-4 py-3 text-base font-semibold text-white transition-all duration-200  bg-cyan-600 border border-transparent rounded-md lg:inline-flex hover:bg-cyan-500 focus:bg-cyan-500" role="button"> Search for charity </a>
+                </div>
             </div>
         </nav>
     </div>

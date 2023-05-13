@@ -16,7 +16,7 @@ import Resources from '../src/pages/Resources';
 import Donate from '../src/pages/Donate';
 import Footer from "./components/Footer";
 import "react-toastify/dist/ReactToastify.css";
-import CharitySearch from "../src/pages/CharitySearch.jsx";
+import CharitySearch from "../src/pages/CharitySearch";
 
 
 // import Hero from "./components/Hero";
@@ -56,7 +56,7 @@ function App() {
       <div>
         <header className="pb-6 bg-white lg:pb-0">
 
-          <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          {/* <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">// */}
 
           
         </header>
@@ -76,10 +76,12 @@ function App() {
         </div>
         </Router>
       {/*<ToastContainer/>*/}
+    
     </ApolloProvider>
      
   );
 }
+
 
 export default App;
 

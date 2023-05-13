@@ -46,8 +46,8 @@ query Query($charityId:ID!){
 }
 `;
 export const ALL_CHARITIES= gql`
-query Query{
-    charities{
+query allCharities($searchTerm: String) {
+  charities(searchTerm: $searchTerm) {
         _id
         ein
         link
@@ -111,4 +111,18 @@ export const ALL_DONATIONS = gql`
       }
     }
   }
+`;
+
+export const GET_ME= gql`
+query Query{
+    me{
+        _id
+        link
+        location
+        ein
+        mission
+        name
+        img
+    }
+}
 `;
