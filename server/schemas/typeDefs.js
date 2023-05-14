@@ -35,6 +35,7 @@ type Charity {
     link: String
     img: String 
     ein : String 
+    location:String
     categories: [Category]
 }
 type  Donation {
