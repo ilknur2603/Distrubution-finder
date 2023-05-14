@@ -43,25 +43,29 @@ const SearchCharitys = () => {
     if (!searchInput) {
       return false;
     }
-    const apiKey = "df10c999-9506-4008-84a4-8b2c5985cb56";
+    const apiKey = "pk_live_673d782aef6dfffeb8d90d0bd9389abe";
     try {
-      const response = await fetch(`https://api.globalgiving.org/api/public/orgservice/organization/${searchInput}?api_key=${apiKey}`)
-        
-
+     const response = await fetch(`https://partners.every.org/v0.2/search/${searchInput}?api_key=${apiKey}`);
+      
 
       if (!response.ok) {
         throw new Error('something went wrong!');
       }
 
-      const { items } = await response.json();
-
-      const charityData = items.map((charity) => ({
+      const {nonprofits } = await response.json();
+      console.log({nonprofits})
+      const charityData = nonprofits.map((charity) => ({
         charityId: charity.id,
-        name: charity.volumeInfo.name,
-        //state: state.volumeInfo.state || ['No state to display'],
+        name: charity.name,
+        description:charity.description,
+       logoUrl: charity.logoUrl,
+       coverImageUrl:charity.coverImageUrl,
+       ein: charity.ein,
+       matchedTerms: charity.matchedTerms.charity,
+       location: charity.location,
+       logoCloudinaryId:charity.logoCloudinaryId,
+       profileUrl: charity.profileUrl,
        
-        //mission: mission.volumeInfo.mission,
-        //ein: charity.volumeInfo.imageLinks?.ein || '',
       
       }));
 
@@ -134,13 +138,16 @@ const SearchCharitys = () => {
             return (
               <Col md="4">
                 <Card key={charity.charityId} border='dark'>
-                  {charity.img ? (
-                    <Card.Img src={charity.img} alt={`The cover for ${charity.name}`} variant='top' />
+                  {charity.coverImageUrl ? (
+                    <Card.Img src={charity.coverImageUrl} alt={`The cover for ${charity.name}`} variant='top' />
                   ) : null}
                   <Card.Body>
                     <Card.Title>{charity.name}</Card.Title>
-                    <p className='small'>Charities: {charity.city}</p>
-                    <Card.Text>{charity.mission}</Card.Text>
+                    <p className='small'>Charities: {charity.location}</p>
+                    <Card.Text>{charity.description}</Card.Text>
+                    <Card.Text>{charity.matchedTerms}</Card.Text>
+                    <Card.Text>{charity.profileUrl}</Card.Text>
+                    <Card.Text>{charity.logoCloudinaryId}</Card.Text>
                     <Card.Text>{charity.ein}</Card.Text>
                    
                     {Auth.loggedIn() && (

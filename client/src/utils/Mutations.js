@@ -51,12 +51,19 @@ mutation Mutation($newCharity: InputCharity) {
     savedCharitys {
       charityId
       name
-      state
-      mission
-      link
+      description
+      logoUrl
+      coverImageUrl
       ein
+      matchedTerms
       location
-      city
+      logoCloudinaryId
+      profileUrl
+    }
+    charity{
+      slug
+      location
+      tags
     }
     donationAmount
     donationDate

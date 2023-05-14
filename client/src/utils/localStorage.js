@@ -8,15 +8,15 @@ export const getSavedCharityIds = () => {
   
   export const saveCharityIds = (charityIdArr) => {
     if (charityIdArr.length) {
-      localStorage.setItem('saved_charity', JSON.stringify(charityIdArr));
+      localStorage.setItem('saved_charitys', JSON.stringify(charityIdArr));
     } else {
-      localStorage.removeItem('saved_charity');
+      localStorage.removeItem('saved_charitys');
     }
   };
   
   export const removeCharityId = (charityId) => {
-    const savedCharityIds = localStorage.getItem('saved_books')
-      ? JSON.parse(localStorage.getItem('saved_books'))
+    const savedCharityIds = localStorage.getItem('saved_charity')
+      ? JSON.parse(localStorage.getItem('saved_charity'))
       : null;
   
     if (!savedCharityIds) {

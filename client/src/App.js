@@ -9,16 +9,16 @@ import { ApolloClient, ApolloProvider, createHttpLink, InMemoryCache } from '@ap
 //import {ToastContainer} from "react-toastify"
 
 // Import your components for each page
-import OurPeople from './pages/OurPeople';
+import QuickDonate from './pages/QuickDonate';
 import WhyGiv2 from './pages/WhyGiv2';
-import Resources from '../src/pages/Resources';
-import Donate from '../src/pages/Donate';
+import OurPeople from '../src/pages/OurPeople';
 import SignupForm from './components/SignUpForm';
 import Footer from "./components/Footer";
 import "react-toastify/dist/ReactToastify.css";
 import CharitySearch from "../src/pages/CharitySearch.jsx";
 import Hero from "../src/components/Hero"
 import LoginForm from './components/LoginForm';
+
 
 // import Hero from "./components/Hero";
 
@@ -59,10 +59,9 @@ function App() {
         
         <Switch>
           <Route exact path="/" component={Hero}/>
-          <Route path="/ourpeople" component={OurPeople} />
+          <Route path="/quickdonate" component={QuickDonate} />
           <Route path="/whygiv2" component={WhyGiv2} />
-          <Route path="/resources" component={Resources} />
-          <Route path="/donate" component={Donate} />
+          <Route path="/ourpeople" component={OurPeople} />
           <Route path='/signup' component={SignupForm} />
           <Route path='/login' component={LoginForm} />
           <Route path="/CharitySearch" component={CharitySearch} />
