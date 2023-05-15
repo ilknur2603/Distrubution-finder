@@ -22,6 +22,7 @@
 <br>
 Project Requirements
 <br>
+<br>
 Your group will use everything you’ve learned throughout this course to create a MERN stack single-page application that works with real-world data to solve a real-world challenge, with a focus on data and user demand. This project will provide you with the best opportunity to demonstrate your problem-solving skills, which employers will want to see during interviews. Once again, the user story and acceptance criteria will depend on the project that you create, but your project must fulfill the following requirements:
 <br>
 Use React for the front end.
@@ -58,6 +59,16 @@ Ultimately, it doesn't matter which of these options you choose—it just needs 
 Payment Platform
 Consider integrating the Stripe payment platform. Even if you don’t create an e-commerce application, you could set up your site to accept charitable donations.
 <br>
+<br>
+<br>
+# Giv2 Homepage
+![Screenshot (504)](https://github.com/ilknur2603/Distrubution-finder/assets/118227399/d884f961-75fa-4e19-8e6d-c787a8da0ed4)
+
+# Giv2 Charity Search
+![giv2 - search for your desired NPO(nonprofit organization)](https://github.com/ilknur2603/Distrubution-finder/assets/118227399/c7713e0a-8aa7-4b30-b53b-e67cd56f8472)
+
+# Giv2 Quick Donate
+![Untitled_ May 15, 2023 4_46 PM](https://github.com/ilknur2603/Distrubution-finder/assets/118227399/ccf37133-0741-4a51-b533-4efc8406c706)
 
 
 Directions for Future Development
@@ -65,7 +76,7 @@ Directions for Future Development
 Links to the deployed application and the GitHub repository. Use the Guide to Deploy with Heroku and MongoDB Atlas on The Full-Stack Blog if you need a reminder on how to deploy to Heroku.
 <br>
 
-##Technologies Used
+## Technologies Used
 <br>
 MongoDB
 <br>
@@ -95,7 +106,7 @@ Tailwind
 <br>
 JavaScript
 <br>
-#installation
+# installation
 To run this application locally:
 *this is for development purposes only
 Pull down and branch this repository
@@ -123,7 +134,7 @@ react-swiper
 # Usage
 <br>
 
-#Test
+# Test
 <br/>
 Mongodb
 <br/>
@@ -137,7 +148,7 @@ Reynaldo Mendez
 <br/>
 Eric Reyes
 <br/>
-#Future Development
+# Future Development
 <br/>
 We would like to continue to add the following functionality to our application:
 <br/>
