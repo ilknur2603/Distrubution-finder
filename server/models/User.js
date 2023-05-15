@@ -17,23 +17,23 @@ const userSchema = new Schema ({
         type: String,
         required:true,
     },
-    donations:[
-        {
-        type: Schema.Types.ObjectId,
-        ref:"Donation",
-     },
-    ],
-    charities: [{
+    // donations:[
+    //     {
+    //     type: Schema.Types.ObjectId,
+    //     ref:"Donation",
+    //  },
+    // ],
+    charity: [{
         type: Schema.Types.ObjectId,
         ref:"Charity"
       },
     ],
-    categories:[
-        {
-      type:Schema.Types.ObjectId,
-      ref:"Category",
-     },
-    ],
+    // categories:[
+    //     {
+    //   type:Schema.Types.ObjectId,
+    //   ref:"Category",
+    //  },
+    // ],
 
 });
 

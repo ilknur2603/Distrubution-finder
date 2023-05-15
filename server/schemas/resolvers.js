@@ -50,7 +50,7 @@ const resolvers = {
 //             throw new AuthenticationError("You must have an account to add a donation!");
 //         },
 
-   addCharity: async (parent, { newCharity }, context) => {
+   saveCharity: async (parent, { newCharity }, context) => {
         if(context.user) {
            const updatedUser = await User.findByIdAndUpdate(
              { _id: context.user._id },

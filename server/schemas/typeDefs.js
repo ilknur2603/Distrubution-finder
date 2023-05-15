@@ -38,23 +38,25 @@ type Charity {
     profileUrl:String
   
 }
-type  Donation {
-    _id: ID
-    donationAmount: Float!
-    donationDate: String!
-    user: User!
-    charity : Charity!
+input InputCharity {
+    charityId: String
+    description:String
+    logoUrl: String
+    coverImageUrl: String
+    logoCloudinaryId: String
+    ein : String 
+    matchedTerms: String
+    location:String
+    profileUrl:String
 }
+
 
 #Query: Defines operations for querying data. It is used for querying users, a specific user, the logged-in user (me), a specific charity, all charities, and all donations.
 
 type Query {
-    users : [User]!
-    user(userId : ID!): User
+    
     me: User
-    charity(charityId:ID!): Charity
-    charities : [Charity]
-    donations : [Donation]
+
 }
 #We will do update, delete and add with using Mutation
 type Mutation {
@@ -68,7 +70,7 @@ type Mutation {
       #  charity: ID!
        # ): Donation
         #addCharity(charityId: ID!): User
-       # unsaveCharity(charityId: ID!): User
+       #unsaveCharity(charityId: ID!): User
         
 
 }

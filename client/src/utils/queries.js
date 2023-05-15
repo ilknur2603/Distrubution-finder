@@ -21,12 +21,15 @@ export const QUERY_ME= gql`
 query Query{
     me{
         _id
-        link
-        location
-        ein
-        mission
         name
-        img
+        description
+        logoUrl
+        coverImageUrl
+        ein
+        matchedTerms
+        location
+        logoCloudinaryId
+        profileUrl
     }
 }
 `;

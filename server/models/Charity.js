@@ -6,31 +6,31 @@ const charitySchema = new Schema ({
         type : String,
         required: true,
     },
-    city: {
+    description: {
         type : String,
     },
-    state: {
+    logoUrl: {
       type: String,
     },
-    mission: {
+    coverImageUrl: {
         type: String,
       }, 
-    link: {
+      logoCloudinaryId: {
         type: String, 
       },
     ein: {
         type: String, 
       },
     
-    img :{
+      matchedTerm :{
         type: String,
         },
-    categories: [
-         {
-      type: Schema.Types.ObjectId,
-              ref: "Category",
-            },
-        ],
+        location:{
+        type: String,
+      },
+      profileUrl:{
+        type: String,
+      },
     });
 
     const Charity = model("Charity", charitySchema);
