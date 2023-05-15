@@ -29,42 +29,42 @@ const server = new ApolloServer({
 app.use(express.urlencoded({ extended: false })); 
 app.use(express.json());
 
-const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY, {
-  apiVersion: "2022-08-01",
-});
-app.use(express.static(process.env.STATIC_DIR));
+// const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY, {
+//   apiVersion: "2022-08-01",
+// });
+// app.use(express.static(process.env.STATIC_DIR));
 
-app.get("/", (req, res) => {
-  const path = resolve(process.env.STATIC_DIR + "/index.html");
-  res.sendFile(path);
-});
+// app.get("/", (req, res) => {
+//   const path = resolve(process.env.STATIC_DIR + "/index.html");
+//   res.sendFile(path);
+// });
 
-app.get("/config", (req, res) => {
-  res.send({
-    publishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
-  });
-});
+// app.get("/config", (req, res) => {
+//   res.send({
+//     publishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
+//   });
+// });
 
-app.post("/create-payment-intent", async (req, res) => {
-  try {
-    const paymentIntent = await stripe.paymentIntents.create({
-      currency: "USD",
-      amount: 50,
+// app.post("/create-payment-intent", async (req, res) => {
+//   try {
+//     const paymentIntent = await stripe.paymentIntents.create({
+//       currency: "USD",
+//       amount: 50,
       
-    });
+//     });
 
-    // Send publishable key and PaymentIntent details to client
-    res.send({
-      clientSecret: paymentIntent.client_secret,
-    });
-  } catch (e) {
-    return res.status(400).send({
-      error: {
-        message: e.message,
-      },
-    });
-  }
-});
+//     // Send publishable key and PaymentIntent details to client
+//     res.send({
+//       clientSecret: paymentIntent.client_secret,
+//     });
+//   } catch (e) {
+//     return res.status(400).send({
+//       error: {
+//         message: e.message,
+//       },
+//     });
+//   }
+// });
 
 
 

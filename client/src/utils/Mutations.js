@@ -18,6 +18,19 @@ export const ADD_USER = gql`
       user {
         _id
         username
+        email
+        savedCharitys {
+          charityId
+            name
+            description
+            logoUrl
+            coverImageUrl
+            ein
+            matchedTerms
+            location
+            logoCloudinaryId
+            profileUrl
+          }
       }
     }
   }
@@ -49,7 +62,7 @@ mutation Mutation($newCharity: InputCharity) {
     username
     email
     savedCharitys {
-      charityId
+    charityId
       name
       description
       logoUrl
