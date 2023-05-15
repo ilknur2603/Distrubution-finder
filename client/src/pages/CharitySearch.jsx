@@ -45,7 +45,7 @@ const SearchCharitys = () => {
     }
     const apiKey = "pk_live_673d782aef6dfffeb8d90d0bd9389abe";
     try {
-     const response = await fetch(`https://partners.every.org/v0.2/search/${searchInput}?api_key=${apiKey}`);
+     const response = await fetch(`https://partners.every.org/v0.2/search/${searchInput}?apiKey=${apiKey}`);
       
 
       if (!response.ok) {
@@ -60,7 +60,7 @@ const SearchCharitys = () => {
         description:charity.description,
        logoUrl: charity.logoUrl,
        coverImageUrl:charity.coverImageUrl,
-       ein: charity.ein,
+       ein:charity.ein,
        matchedTerms: charity.matchedTerms.charity,
        location: charity.location,
        logoCloudinaryId:charity.logoCloudinaryId,
@@ -73,12 +73,13 @@ const SearchCharitys = () => {
       setSearchInput('');
     } catch (err) {
       console.error(err);
+      console.log("line76 error, check it")
     }
   };
 
   // create function to handle saving a charity to our database
   const handleSaveCharity = async (charityId) => {
-    // find the book in `searchedCharitys` state by the matching id
+    // find the charity in `searchedCharitys` state by the matching id
     const charityToSave = searchedCharitys.find((charity) => charity.charityId === charityId);
 
     // get token
@@ -97,6 +98,7 @@ const SearchCharitys = () => {
       setSavedCharityIds([...savedCharityIds, charityToSave.charityId]);
     } catch (err) {
       console.error(err);
+      console.log("savedCharity error")
     }
   };
 
