@@ -121,9 +121,9 @@ react-swiper
 <br>
 
 # Usage
-<br>
+
 ## Giv2 Homepage
-![Screenshot (504)](https://github.com/ilknur2603/Distrubution-finder/assets/118227399/d884f961-75fa-4e19-8e6d-c787a8da0ed4)
+![Screenshot (504)](https://github.com/ilknur2603/Distrubution-finder/assets/118227399/8437f45d-38e3-4efa-9cff-f6bc11ff46b1)
 
 ## Giv2 Charity Search
 ![giv2 - search for your desired NPO(nonprofit organization)](https://github.com/ilknur2603/Distrubution-finder/assets/118227399/c7713e0a-8aa7-4b30-b53b-e67cd56f8472)
