@@ -25,9 +25,11 @@ const charitySchema = new Schema ({
       matchedTerm :{
         type: String,
         },
-        location:{type: String,
+        location:{
+        type: String,
       },
-      profileUrl:{type: String,
+      profileUrl:{
+        type: String,
       },
     });
 

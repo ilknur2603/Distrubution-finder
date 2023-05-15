@@ -19,18 +19,7 @@ export const ADD_USER = gql`
         _id
         username
         email
-        savedCharitys {
-          charityId
-            name
-            description
-            logoUrl
-            coverImageUrl
-            ein
-            matchedTerms
-            location
-            logoCloudinaryId
-            profileUrl
-          }
+       password
       }
     }
   }

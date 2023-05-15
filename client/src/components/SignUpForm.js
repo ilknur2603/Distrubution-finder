@@ -32,9 +32,9 @@ const SignupForm = () => {
 console.log("before try");
     try {
       const {data} = await addUser({variables:{...userFormData}}); 
-      
-      Auth.login(addUser.data.token);
       console.log(data);
+      Auth.login(addUser.data.token);
+      
     } catch (err) {
       console.error(err);
       

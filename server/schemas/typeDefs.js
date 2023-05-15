@@ -49,13 +49,7 @@ input InputCharity {
     location:String
     profileUrl:String
 }
-type  Donation {
-    _id: ID
-    donationAmount: Float!
-    donationDate: String!
-    user: User!
-    charity : Charity!
-}
+
 
 #Query: Defines operations for querying data. It is used for querying users, a specific user, the logged-in user (me), a specific charity, all charities, and all donations.
 
