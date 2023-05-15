@@ -8,9 +8,8 @@ type User {
     _id :ID!
     username : String!
     email : String!
-    charities:[Charity]
-    donations : [Donation]
-    categories : [Category]
+    savedCharitys:[Charity]
+   
 }
 
 # declaring type Auth with it values
@@ -18,25 +17,26 @@ type Auth {
     token: ID!
     user: User
 }
-type Category {
-    _id: ID
-    name: String
-    charities: [Charity]!
-  }
+#type Category {
+  #  _id: ID
+  # name: String
+  #  charities: [Charity]!
+  #}
 
 
 
 type Charity {
     _id :ID
     name : String
-    city: String
-    state: String
-    mission: String
-    link: String
-    img: String 
+    description:String
+    logoUrl: String
+    coverImageUrl: String
+    logoCloudinaryId: String
     ein : String 
+    matchedTerms: String
     location:String
-    categories: [Category]
+    profileUrl:String
+  
 }
 type  Donation {
     _id: ID
@@ -60,14 +60,15 @@ type Query {
 type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email:String!, password: String!): Auth
-    addDonation(
-
-        donationAmount: Float!
-        donationDate: String!
-        charity: ID!
-        ): Donation
-        addCharity(charityId: ID!): User
-        unsaveCharity(charityId: ID!): User
+    saveCharity(newCharity:InputCharity!):User
+    unsaveCharity(charityId: ID!):User
+    # addDonation(
+      #    donationAmount: Float!
+     #   donationDate: String!
+      #  charity: ID!
+       # ): Donation
+        #addCharity(charityId: ID!): User
+       # unsaveCharity(charityId: ID!): User
         
 
 }

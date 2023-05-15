@@ -28,34 +28,34 @@ function NavBar() {
 
             <div className="hidden lg:flex lg:items-center lg:ml-auto lg:space-x-10">
                 
-                <NavLink style= {({isActive}) =>({color: isActive && "red"})} to="/ourpeople" className="text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Our people </NavLink>
+                <NavLink activeStyle= {({isActive}) =>({color: isActive && "red"})} to="/quickdonate" className="text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Quick Donate </NavLink>
 
-                <NavLink style= {({isActive}) =>({color: isActive && "red"})} to="/whygiv2" className="text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Why giv2? </NavLink>
+                <NavLink activeStyle= {({isActive}) =>({color: isActive && "red"})} to="/whygiv2" className="text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Why giv2? </NavLink>
 
-                <NavLink style= {({isActive}) =>({color: isActive && "red"})}  to="/resources" className="text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Resources </NavLink>
+                <NavLink activeStyle= {({isActive}) =>({color: isActive && "red"})}  to="/ourpeople" className="text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Our People </NavLink>
 
-                <NavLink style= {({isActive}) =>({color: isActive && "red"})}  to="/donate" className="text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Donate </NavLink>
+               
             </div>
 
-            <a href="CharitySearch" title="CharitySearch" className="items-center justify-center hidden px-4 py-3 ml-10 text-base font-semibold text-white transition-all duration-200 bg-cyan-600 border border-transparent rounded-md lg:inline-flex hover:bg-cyan-500 focus:bg-cyan-500" role="button">Search for charity</a>
+            <Link to="/CharitySearch" title="CharitySearch" className="items-center justify-center hidden px-4 py-3 ml-10 text-base font-semibold text-white transition-all duration-200 bg-cyan-600 border border-transparent rounded-md lg:inline-flex hover:bg-cyan-500 focus:bg-cyan-500" role="button">Search for charity </Link>
         </nav>
 
         {/* <!-- xs to lg --> */}
         <nav className="pt-4 pb-6 bg-white border border-gray-200 rounded-md shadow-md lg:hidden">
             <div className="flow-root">
                 <div className="flex flex-col px-6 -my-2 space-y-1">
-                <NavLink style= {({isActive}) =>({color: isActive && "red"})} to="/ourpeople"  className="inline-flex py-2 text-base  font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Our people</NavLink>
+                <NavLink style= {({isActive}) =>({color: isActive && "red"})} to="/quickdonate"  className="inline-flex py-2 text-base  font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Quick Donate</NavLink>
 
                 <NavLink style= {({isActive}) =>({color: isActive && "red"})} to="/whygiv2" className="inline-flex py-2 text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Why giv2? </NavLink>
 
                 <NavLink style= {({isActive}) =>({color: isActive && "red"})} to="/resources" className="inline-flex py-2 text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Resources </NavLink>
 
-                <NavLink style= {({isActive}) =>({color: isActive && "red"})} to="/donate" className="inline-flex py-2 text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Donate </NavLink>
+                
                 </div>
             </div>
 
             <div className="px-6 mt-6">
-                <a href="#" title="" className="inline-flex justify-center px-4 py-3 text-base font-semibold text-white transition-all duration-200  bg-cyan-600 border border-transparent rounded-md lg:inline-flex hover:bg-cyan-500 focus:bg-cyan-500" role="button"> Search for charity </a>
+                <Link to="/CharitySearch" className="inline-flex justify-center px-4 py-3 text-base font-semibold text-white transition-all duration-200  bg-cyan-600 border border-transparent rounded-md lg:inline-flex hover:bg-cyan-500 focus:bg-cyan-500" role="button"> Search for charity </Link>
             </div>
         </nav>
     </div>
