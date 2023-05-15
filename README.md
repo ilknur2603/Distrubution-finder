@@ -122,14 +122,13 @@ react-swiper
 
 # Usage
 <br>
-# Giv2 Homepage
-
+## Giv2 Homepage
 ![Screenshot (504)](https://github.com/ilknur2603/Distrubution-finder/assets/118227399/d884f961-75fa-4e19-8e6d-c787a8da0ed4)
 
-# Giv2 Charity Search
+## Giv2 Charity Search
 ![giv2 - search for your desired NPO(nonprofit organization)](https://github.com/ilknur2603/Distrubution-finder/assets/118227399/c7713e0a-8aa7-4b30-b53b-e67cd56f8472)
 
-# Giv2 Quick Donate
+## Giv2 Quick Donate
 ![Untitled_ May 15, 2023 4_46 PM](https://github.com/ilknur2603/Distrubution-finder/assets/118227399/ccf37133-0741-4a51-b533-4efc8406c706)
 
 # Test
