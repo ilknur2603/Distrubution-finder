@@ -19,7 +19,7 @@ function Page1() {
                     </svg>
                     <div class="ml-5">
                         <h3 class="text-lg font-semibold text-black">Made for Everyone</h3>
-                        <p class="mt-4 text-base text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                        <p class="mt-4 text-base text-gray-600">Giv2 was developed for the individual who is new to donating and for people who like to donate regularly.</p>
                     </div>
                 </div>
 
@@ -29,7 +29,7 @@ function Page1() {
                     </svg>
                     <div class="ml-5">
                         <h3 class="text-lg font-semibold text-black">Helping charities build trust</h3>
-                        <p class="mt-4 text-base text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                        <p class="mt-4 text-base text-gray-600">Using a verified database we are bridging a new way to allow Giv2 users a way to build a relationship with nonprofits of their choosing.</p>
                     </div>
                 </div>
 
@@ -44,7 +44,7 @@ function Page1() {
                     </svg>
                     <div class="ml-5">
                         <h3 class="text-lg font-semibold text-black">1300+ Donating causes</h3>
-                        <p class="mt-4 text-base text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                        <p class="mt-4 text-base text-gray-600">Search our Giv2 database for verified nonprofit organizations that fit what you believe in.</p>
                     </div>
                 </div>
 
@@ -53,8 +53,8 @@ function Page1() {
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg>
                     <div class="ml-5">
-                        <h3 class="text-lg font-semibold text-black">Secured charity trust</h3>
-                        <p class="mt-4 text-base text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                        <h3 class="text-lg font-semibold text-black">Secured donating</h3>
+                        <p class="mt-4 text-base text-gray-600">Giv2 allows for donations to be processed easily and securely using STRIPE.</p>
                     </div>
                 </div>
             </div>
