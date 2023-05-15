@@ -29,14 +29,17 @@ type Category {
 type Charity {
     _id :ID
     name : String
-    city: String
-    state: String
-    mission: String
-    link: String
-    img: String 
+    description:String
+    logoUrl: String
+    coverImageUrl: String
+    logoCloudinaryId: String
+    coverImageUrl: String 
     ein : String 
+    matchedTerms: String
     location:String
-    categories: [Category]
+    logoCloudinaryId
+    profileUrl:String
+  
 }
 type  Donation {
     _id: ID
