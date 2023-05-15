@@ -123,6 +123,7 @@ react-swiper
 # Usage
 <br>
 # Giv2 Homepage
+
 ![Screenshot (504)](https://github.com/ilknur2603/Distrubution-finder/assets/118227399/d884f961-75fa-4e19-8e6d-c787a8da0ed4)
 
 # Giv2 Charity Search
@@ -135,7 +136,18 @@ react-swiper
 <br/>
 Mongodb
 <br/>
-#Collaborators
+
+# Future Development
+<br/>
+We would like to continue to add the following functionality to our application:
+Implement donate/save buttons in Recommendation
+Storing donation data in back-end
+Forgot password functionality
+Login with Google or Facebook options
+Creating category and user can make a donation wich category they want
+Category questionnaire for user
+
+# Collaborators
 <br/>
 Ilknur Dayanc Bloomer
 <br/>
@@ -145,13 +157,5 @@ Reynaldo Mendez
 <br/>
 Eric Reyes
 <br/>
-# Future Development
-<br/>
-We would like to continue to add the following functionality to our application:
-<br/>
-Implement donate/save buttons in Recommendation
-Storing donation data in back-end
-Forgot password functionality
-Login with Google or Facebook options
-Creating category and user can make a donation wich category they want
-Category questionnaire for user
+
+
