@@ -66,6 +66,7 @@ Links to the deployed application and the GitHub repository. Use the Guide to De
 <br>
 
 ##Technologies Used
+<br>
 MongoDB
 <br>
 ExpressJS
