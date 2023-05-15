@@ -58,13 +58,13 @@ const SearchCharitys = () => {
         charityId: charity.id,
         name: charity.name,
         description:charity.description,
-       logoUrl: charity.logoUrl,
+        logoUrl: charity.logoUrl,
        coverImageUrl:charity.coverImageUrl,
-       ein:charity.ein,
-       matchedTerms: charity.matchedTerms.charity,
-       location: charity.location,
-       logoCloudinaryId:charity.logoCloudinaryId,
-       profileUrl: charity.profileUrl,
+        ein:charity.ein,
+        matchedTerms: charity.matchedTerms.charity,
+        location: charity.location,
+        logoCloudinaryId:charity.logoCloudinaryId,
+        profileUrl: charity.profileUrl,
        
       
       }));
