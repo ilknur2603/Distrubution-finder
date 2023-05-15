@@ -5,7 +5,7 @@
 # Table of Contents
 
 - #1. [Description](#description)
-- #2. [Technologies Used](#technologies-used)
+- #2. [Technologies Used](#technologies used)
 - #3. [Installation](#installation)
 - #4. [Usage](#usage)
 - #5. [License](#license)
@@ -64,6 +64,7 @@ Directions for Future Development
 <br>
 Links to the deployed application and the GitHub repository. Use the Guide to Deploy with Heroku and MongoDB Atlas on The Full-Stack Blog if you need a reminder on how to deploy to Heroku.
 <br>
+
 ##Technologies Used
 MongoDB
 <br>
