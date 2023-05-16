@@ -2,7 +2,7 @@ import { gql } from "@apollo/client";
 
 export const LOGIN_USER = gql`
   mutation login($email: String!, $password: String!) {
-    login(email: $email, password:$password) {
+    login(email: $email, password: $password) {
       token
       user {
         _id
@@ -24,16 +24,16 @@ export const ADD_USER = gql`
   }
 `;
 export const ADD_DONATION = gql`
-mutation Mutation(
-  $donationAmount: Float!
-  $donationDate: String!
-  $charity: ID!
-) {
-  addDonation(
-    donationAmount: $donationAmount
-    donationDate: $donationDate
-    charity: $charity
-  ) 
+  mutation Mutation(
+    $donationAmount: Float!
+    $donationDate: String!
+    $charity: ID!
+  ) {
+    addDonation(
+      donationAmount: $donationAmount
+      donationDate: $donationDate
+      charity: $charity
+    )
     donationAmount
     donationDate
     user {
@@ -41,49 +41,36 @@ mutation Mutation(
       username
     }
   }
-
 `;
 export const ADD_CHARITY = gql`
-mutation Mutation($newCharity: InputCharity) {
-  saveCharity(newCharity: $newCharity) {
-    _id
-    username
-    email
-    savedCharitys {
-    charityId
-      name
-      description
-      logoUrl
-      coverImageUrl
-      ein
-      matchedTerms
-      location
-      logoCloudinaryId
-      profileUrl
-    }
-    charity{
-      slug
-      location
-      tags
-    }
-    donationAmount
-    donationDate
-    user {
+  mutation Mutation($newCharity: InputCharity) {
+    saveCharity(newCharity: $newCharity) {
       _id
       username
+      email
+      charity {
+        _id
+        name
+        description
+        logoUrl
+        coverImageUrl
+        ein
+        matchedTerms
+        location
+        logoCloudinaryId
+        profileUrl
+      }
     }
   }
-}
-
 `;
 
 // Updated mutation
 export const UNSAVE_CHARITY = gql`
-  mutation Mutation($charityId:ID!) {
-    unsaveCharity(charityId:$charityId) {
+  mutation Mutation($charityId: ID!) {
+    unsaveCharity(charityId: $charityId) {
       _id
       username
-     
+
       charities {
         _id
       }
