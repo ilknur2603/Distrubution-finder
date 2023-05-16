@@ -35,7 +35,7 @@ type Charity {
     ein : String 
     matchedTerms: String
     location:String
-    profileUrl:String
+     profileUrl:String
   
 }
 input InputCharity {

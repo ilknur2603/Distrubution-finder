@@ -18,6 +18,7 @@ import "react-toastify/dist/ReactToastify.css";
 import CharitySearch from "../src/pages/CharitySearch.jsx";
 import Hero from "../src/components/Hero"
 import LoginForm from './components/LoginForm';
+import Logout from './pages/Logout';
 
 
 // import Hero from "./components/Hero";
@@ -65,6 +66,7 @@ function App() {
           <Route path='/signup' component={SignupForm} />
           <Route path='/login' component={LoginForm} />
           <Route path="/CharitySearch" component={CharitySearch} />
+          <Route path="/logout" component={Hero} />
           <Route  path='*'  element={<h1 className='display-2'>Wrong page!</h1>} />
         </Switch>
        

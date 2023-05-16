@@ -24,26 +24,26 @@ export const ADD_USER = gql`
     }
   }
 `;
-export const ADD_DONATION = gql`
-mutation Mutation(
-  $donationAmount: Float!
-  $donationDate: String!
-  $charity: ID!
-) {
-  addDonation(
-    donationAmount: $donationAmount
-    donationDate: $donationDate
-    charity: $charity
-  ) 
-    donationAmount
-    donationDate
-    user {
-      _id
-      username
-    }
-  }
+// export const ADD_DONATION = gql`
+// mutation Mutation(
+//   $donationAmount: Float!
+//   $donationDate: String!
+//   $charity: ID!
+// ) {
+//   addDonation(
+//     donationAmount: $donationAmount
+//     donationDate: $donationDate
+//     charity: $charity
+//   ) 
+//     donationAmount
+//     donationDate
+//     user {
+//       _id
+//       username
+//     }
+//   }
 
-`;
+// `;
 export const ADD_CHARITY = gql`
 mutation Mutation($newCharity: InputCharity) {
   saveCharity(newCharity: $newCharity) {
@@ -62,17 +62,12 @@ mutation Mutation($newCharity: InputCharity) {
       logoCloudinaryId
       profileUrl
     }
-    charity{
+        charity{
       slug
       location
       tags
     }
-    donationAmount
-    donationDate
-    user {
-      _id
-      username
-    }
+  
   }
 }
 
@@ -85,7 +80,7 @@ export const UNSAVE_CHARITY = gql`
       _id
       username
      
-      charities {
+      charity {
         _id
       }
     }

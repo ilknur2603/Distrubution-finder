@@ -17,10 +17,19 @@ const resolvers = {
 
        //POST: Adding a new user
        addUser: async( parent, {username, email, password}) => {
-        const user = await User.create({ username, email, password});
-        const token = signToken(user);
-        return { token, user };
-    },
+        try{
+          const user = await User.create({ username, email, password});
+          const token = signToken(user);
+        
+          return { token, user };
+      } catch(err)
+      {
+        console.error(err);
+        throw new Error("string err")
+      }
+      
+        },
+       
         login: async (parent, {email, password}) => {
             const user = await User.findOne({ email })
 

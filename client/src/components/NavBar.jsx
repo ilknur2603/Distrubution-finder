@@ -33,6 +33,7 @@ function NavBar() {
                 <NavLink activeStyle= {({isActive}) =>({color: isActive && "red"})} to="/whygiv2" className="text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Why giv2? </NavLink>
 
                 <NavLink activeStyle= {({isActive}) =>({color: isActive && "red"})}  to="/ourpeople" className="text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Our People </NavLink>
+                <NavLink activeStyle= {({isActive}) =>({color: isActive && "red"})}  to="/logout" className="text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Logout </NavLink>
 
                
             </div>
@@ -48,8 +49,8 @@ function NavBar() {
 
                 <NavLink style= {({isActive}) =>({color: isActive && "red"})} to="/whygiv2" className="inline-flex py-2 text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Why giv2? </NavLink>
 
-                <NavLink style= {({isActive}) =>({color: isActive && "red"})} to="/resources" className="inline-flex py-2 text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Resources </NavLink>
-
+                <NavLink style= {({isActive}) =>({color: isActive && "red"})} to="/resources" className="inline-flex py-2 text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Our People </NavLink>
+                <NavLink activeStyle= {({isActive}) =>({color: isActive && "red"})}  to="/logout" className="text-base font-medium text-orange-950 transition-all duration-200 hover:text-cyan-600 focus:text-cyan-600"> Logout </NavLink>
                 
                 </div>
             </div>
