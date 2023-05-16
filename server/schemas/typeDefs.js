@@ -8,7 +8,8 @@ type User {
     _id :ID!
     username : String!
     email : String!
-    savedCharitys:[Charity]
+    password: String!
+    charity:[Charity]
    
 }
 
@@ -56,8 +57,10 @@ input InputCharity {
 type Query {
     
     me: User
-
+    allUsers: [User]
 }
+
+
 #We will do update, delete and add with using Mutation
 type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth

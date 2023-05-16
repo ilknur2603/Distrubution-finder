@@ -11,6 +11,16 @@ const resolvers = {
             }
             throw new AuthenticationError('You need to be logged in!');
         },
+
+        allUsers: async (parent, args, context) => {
+          try {
+            const users = await User.find({});
+            return users;
+          } catch(err) {
+            console.error(err)
+          throw new Error('You need to be logged in!');
+          
+        }}
     },
 
     Mutation: {
