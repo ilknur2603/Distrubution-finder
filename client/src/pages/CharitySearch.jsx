@@ -11,7 +11,7 @@ import {
 import Auth from '../utils/auth';
 
 import { useMutation } from '@apollo/client';
-import {ADD_CHARITY} from "../utils/mutations"
+import {ADD_CHARITY} from "../utils/Mutations"
 import { saveCharityIds, getSavedCharityIds } from '../utils/localStorage';
 
 const SearchCharitys = () => {
