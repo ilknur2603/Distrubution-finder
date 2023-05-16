@@ -6,16 +6,16 @@ const userSchema = new Schema ({
         type: String,
         required:true,
         unique:true,
-        match:[/.+@.+\..+/, "Must use a valid email address"],
     },
     email: {
       type: String, 
       required: true,
-      trim: true
+      trim: true,
+      match:[/.+@.+\..+/, "Must use a valid email address"],
     },
     password:{
         type: String,
-        required:true,
+        required: true,
     },
     // donations:[
     //     {

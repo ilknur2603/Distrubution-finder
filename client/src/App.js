@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Switch, Link } from 'react-router-dom'; 
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'; 
 
 import NavBar from "./components/NavBar";
 import {setContext} from "@apollo/client/link/context"
