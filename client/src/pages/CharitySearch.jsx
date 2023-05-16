@@ -11,7 +11,7 @@ import {
 import Auth from '../utils/auth';
 
 import { useMutation } from '@apollo/client';
-import {ADD_CHARITY} from "../utils/mutations"
+import {ADD_CHARITY} from "../utils/Mutations"
 import { saveCharityIds, getSavedCharityIds } from '../utils/localStorage';
 
 const SearchCharitys = () => {
@@ -89,12 +89,12 @@ const SearchCharitys = () => {
       return false;
     }
 //*******************************************
-    try {
-      await saveCharity({variables: {newCharity:{...charityToSave}},});
+try {
+  const { data } = await saveCharity({
+    variables: { newCharity: { ...charityToSave } },
+  });
 
-     
-
-      // if book successfully saves to user's account, save charity id to state
+      // if charity successfully saves to user's account, save charity id to state
       setSavedCharityIds([...savedCharityIds, charityToSave.charityId]);
     } catch (err) {
       console.error(err);
