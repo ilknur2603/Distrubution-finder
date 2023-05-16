@@ -23,6 +23,7 @@ export const ADD_USER = gql`
     }
   }
 `;
+//Alert
 export const ADD_DONATION = gql`
   mutation Mutation(
     $donationAmount: Float!
